@@ -13,8 +13,17 @@ class MainController extends AbstractController
      */
     public function home(): Response
     {
-        return $this->render('front/main/index.html.twig', [
+        return $this->render('front/main/home.html.twig', [
             'controller_name' => 'MainController',
         ]);
+    }
+
+    /**
+     * @Route("/myAccount", name="account")
+     */
+    public function account()
+    {
+        //TODO Faire le template de la page du compte
+        return null;
     }
 }

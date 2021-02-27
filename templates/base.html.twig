@@ -24,7 +24,7 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{ path('home') }}">Accueil </a>
                 </li>
-                
+
                 {% if is_granted('IS_AUTHENTICATED_FULLY') %}
                     <li class="nav-item">
                         <a class="nav-link" href="{{ path('app_logout') }}">Deconnexion</a>
@@ -38,10 +38,11 @@
                 </ul>
             </div>
         </nav>
-            <div id="intro_text">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut vel fugit voluptates, adipisci omnis aut harum quia in, illum temporibus similique totam! Voluptatem, minima odit cupiditate laborum nulla ipsa quas?
-            </div>
+            
         <div class="container">
+            {% block textHome %}
+            {% endblock %}
+
             {% block body %}
             {% endblock %}
         </div>
