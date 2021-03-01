@@ -15,7 +15,7 @@ class DataController extends AbstractController
     {
         $titlePage = 'Data One';
 
-        return $this->render('front/data/data.html.twig', [
+        return $this->render('front/data/dataOne.html.twig', [
             'title' => $titlePage
         ]);
     }
@@ -27,7 +27,7 @@ class DataController extends AbstractController
     {
         $titlePage = 'Data Two';
 
-        return $this->render('front/data/data.html.twig', [
+        return $this->render('front/data/dataTwo.html.twig', [
             'title' => $titlePage
         ]);
     }
@@ -39,7 +39,7 @@ class DataController extends AbstractController
     {
         $titlePage = 'Data Three';
         
-        return $this->render('front/data/data.html.twig', [
+        return $this->render('front/data/dataThree.html.twig', [
             'title' => $titlePage
         ]);
     }
@@ -51,7 +51,7 @@ class DataController extends AbstractController
     {
         $titlePage = 'Data Four';
         
-        return $this->render('front/data/data.html.twig', [
+        return $this->render('front/data/dataFour.html.twig', [
             'title' => $titlePage
         ]);
     }

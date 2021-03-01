@@ -25,7 +25,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ path('home') }}">Accueil </a>
+                    <a class="nav-link {% block linkHome %}{% endblock %}" href="{{ path('home') }}">Accueil </a>
                 </li>
 
                 {% if is_granted('IS_AUTHENTICATED_FULLY') %}
@@ -44,20 +44,18 @@
 
         {% if is_granted('IS_AUTHENTICATED_FULLY') %}
             <nav class="nav nav-pills nav-justified">
-                <a class="nav-link" href="{{ path('data_one') }}">Data One</a>
-                <a class="nav-link" href="{{ path('data_two') }}">Data Two</a>
-                <a class="nav-link" href="{{ path('data_three') }}">Data Three</a>
-                <a class="nav-link" href="{{ path('data_four') }}" >Data Four</a>
+                <a class="nav-link {% block linkDataOne %}{% endblock %}" href="{{ path('data_one') }}">Data One</a>
+                <a class="nav-link {% block linkDataTwo %}{% endblock %}" href="{{ path('data_two') }}">Data Two</a>
+                <a class="nav-link {% block linkDataThree %}{% endblock %}" href="{{ path('data_three') }}">Data Three</a>
+                <a class="nav-link {% block linkDataFour %}{% endblock %}" href="{{ path('data_four') }}" >Data Four</a>
             </nav>
         {% endif %}
 
         <div class="container">
 
-            {% block textHome %}
-            {% endblock %}
+            {% block textHome %}{% endblock %}
 
-            {% block body %}
-            {% endblock %}
+            {% block body %}{% endblock %}
         </div>
         
 
