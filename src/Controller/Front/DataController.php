@@ -9,12 +9,50 @@ use Symfony\Component\Routing\Annotation\Route;
 class DataController extends AbstractController
 {
     /**
-     * @Route("/data_one", name="data_one")
+     * @Route("/dataOne", name="data_one")
      */
-    public function data_one(): Response
+    public function dataOne(): Response
     {
-        return $this->render('front/data/index.html.twig', [
-            'controller_name' => 'DataController',
+        $titlePage = 'Data One';
+
+        return $this->render('front/data/data.html.twig', [
+            'title' => $titlePage
+        ]);
+    }
+
+    /**
+     * @Route("/dataTwo", name="data_two")
+     */
+    public function dataTwo(): Response
+    {
+        $titlePage = 'Data Two';
+
+        return $this->render('front/data/data.html.twig', [
+            'title' => $titlePage
+        ]);
+    }
+
+    /**
+     * @Route("/dataThree", name="data_three")
+     */
+    public function dataThree(): Response
+    {
+        $titlePage = 'Data Three';
+        
+        return $this->render('front/data/data.html.twig', [
+            'title' => $titlePage
+        ]);
+    }
+
+    /**
+     * @Route("/dataFour", name="data_four")
+     */
+    public function dataFour(): Response
+    {
+        $titlePage = 'Data Four';
+        
+        return $this->render('front/data/data.html.twig', [
+            'title' => $titlePage
         ]);
     }
 }
