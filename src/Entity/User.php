@@ -5,9 +5,12 @@ namespace App\Entity;
 use App\Repository\UserRepository;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\UserInterface;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
 /**
  * @ORM\Entity(repositoryClass=UserRepository::class)
+ * @ORM\HasLifecycleCallbacks()
+ * @UniqueEntity("email")
  */
 class User implements UserInterface
 {
@@ -181,5 +184,25 @@ class User implements UserInterface
         $this->updatedAt = $updatedAt;
 
         return $this;
+    }
+
+     /**
+     * Mise à jour auto de la date d'updatedAt
+     * 
+     * @ORM\PreUpdate()
+     */
+    public function setUpdatedAtValue()
+    {
+        $this->updatedAt = new \DateTime();
+    }
+
+    /**
+     * Valeur par défaut enregistré en BDD
+     * 
+     * @ORM\PrePersist()
+     */
+    public function setValueDefault()
+    {
+        $this->createdAt = new \DateTime();
     }
 }
