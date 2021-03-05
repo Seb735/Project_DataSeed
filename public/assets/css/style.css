@@ -1,0 +1,10 @@
+
+/*=================
+-----HOME PAGE----
+==================*/
+
+#intro_text {
+    margin: 1rem 10rem 3rem 10rem;
+    border-bottom: solid 1px gray;
+    padding: 3rem;
+}
