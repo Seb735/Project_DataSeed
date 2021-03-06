@@ -18,12 +18,4 @@ class MainController extends AbstractController
         ]);
     }
 
-    /**
-     * @Route("/myAccount", name="account")
-     */
-    public function account()
-    {
-        //TODO Faire le template de la page du compte
-        return null;
-    }
 }

@@ -29,6 +29,14 @@
 
                 {% if is_granted('IS_AUTHENTICATED_FULLY') %}
                     <li class="nav-item">
+                        <a class="nav-link disabled">Bienvenue {{ app.user.firstName }} {{ app.user.lastName }}</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ path('user_profile') }}">Mon compte</a>
+                    </li>
+
+                    <li class="nav-item">
                         <a class="nav-link" href="{{ path('app_logout') }}">Deconnexion</a>
                     </li>
                 {% else %}

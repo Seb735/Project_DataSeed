@@ -41,7 +41,7 @@ class RegisterType extends AbstractType
                     new Regex(
                         [   
                             'pattern' => "/^(?=.*[A-Z])(?=.*[!@#$&*])(?=.*[0-9])(?=.*[a-z]).{8,}$/i",
-                            'htmlPattern' => "^[a-zA-Z]+$"
+                            'htmlPattern' => "^(?=.*[A-Z])(?=.*[!@#$&*])(?=.*[0-9])(?=.*[a-z]).{8,}$"
                         ]
                     ),
                 ]
